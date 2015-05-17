@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!--
+ * This file is part of Expotec App.
+ *
+ *  Foobar is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  Foobar is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
+ *
+-->
+<html>
+    <head>
+        <title>Expotec</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Para Windows Phone 
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        -->
+        <link href="libs/jquery-mobile/jquery.mobile.css" rel="stylesheet">
+        <link href="libs/jquery-mobile-theme/expotec.css" rel="stylesheet">
+        <link href="libs/font-awesome/css/font-awesome.css" rel="stylesheet">
+        <link href="libs/opensans/stylesheet.css" rel="stylesheet">
+        <link href="css/index.css" rel="stylesheet">
+        <script src="libs/jquery/jquery.min.js"></script>
+        <script src="libs/jquery-mobile/jquery.mobile.js"></script>
+        <script src="libs/i18next/i18next-1.6.3.min.js"></script>
+        <script src="js/index.js"></script>
+    </head>
+    <body>
+        <!-- begin home page -->
+        <section id="mainmenu-page" data-role="page">
+            <div id="eventhub-mainlogo"></div>
+            <div class="be-main-menu-grid">
+                <div class="ui-grid-a be-mainmenu">
+                    <div class="ui-block-a"><a href="#schedule-page" class="ui-btn be-mainmenu-btn">
+                            <div class="center-vertically"><i class="fa fa-calendar fa-4x"></i><br><span data-i18n="schedule"></span></div>
+                    </a></div>
+                    <div class="ui-block-b"><a href="#speekers-page" class="ui-btn be-mainmenu-btn">
+                        <div class="center-vertically"><i class="fa fa-comment fa-4x"></i><br><span data-i18n="speekers"></span></div>
+                    </a></div>
+                </div>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a"><a href="#news-page" class="ui-btn be-mainmenu-btn">
+                            <div class="center-vertically"><i class="fa fa-newspaper-o fa-4x"></i><br><span data-i18n="news"></span></div>
+                    </a></div>
+                    <div class="ui-block-b"><a href="#about-page" class="ui-btn be-mainmenu-btn">
+                        <div class="center-vertically"><i class="fa fa-info fa-4x"></i><br><span data-i18n="about"></span></div>
+                    </a></div>
+                </div>
+            </div>
+        </section>
+        <!-- end home page -->
+        
+        <!-- schedule page -->
+        <section id="schedule-page" data-role="page" class="ui-responsive-panel">
+            <header data-role="header" data-position="fixed" data-fullscreen="true" data-tap-toggle="false">
+                <h1 class="be-expotec-white-logo"></h1>
+                <a data-rel="back"><i class="fa fa-reorder fa-2x"></i></a>
+                <a href="#schedule-filter-panel"><i class="fa fa-filter fa-2x"></i></a>
+            </header>
+            <div role="main" class="ui-content">
+                <!-- Lista -->
+                <div id="lista-por-dia" data-role="collapsible-set" data-corners="false" data-iconpos="none" data-filter="true" data-input="#filterable-input-agenda">
+                    <div data-role="collapsible" data-inset="false" class="ui-cp-por-dia animateMe">
+                        <h1 class="ui-cp-collapsible-title ui-collapsible-heading">
+                            <span class="ui-cp-li-wrapper">
+                                <span class="ui-cp-nome-palco">27 de maio de 2015</span>
+                            </span>
+                        </h1>
+                        <ul id='dia-3' data-role="listview" data-filter="true" data-input="#filterable-input-agenda"></ul>
+                    </div><!-- Dia 27 -->
+
+                    <div data-role='collapsible' data-inset="false" class="ui-cp-por-dia animateMe">
+                        <h1 class="ui-cp-collapsible-title ui-collapsible-heading">
+                            <span class="ui-cp-li-wrapper">
+                                <span class="ui-cp-nome-palco">28 de maio de 2015</span>
+                            </span>
+                        </h1>
+                        <ul id='dia-28' data-role="listview" data-filter="true" data-input="#filterable-input-agenda"></ul>
+                    </div><!-- Dia 28 de maio -->
+                    
+                    <div data-role='collapsible' data-inset="false" class="ui-cp-por-dia animateMe">
+                        <h1 class="ui-cp-collapsible-title ui-collapsible-heading">
+                            <span class="ui-cp-li-wrapper">
+                                <span class="ui-cp-nome-palco">28 de maio de 2015</span>
+                            </span>
+                        </h1>
+                        <ul id='dia-29' data-role="listview" data-filter="true" data-input="#filterable-input-agenda"></ul>
+                    </div><!-- Dia 29 de maio -->
+                    
+                    <div data-role='collapsible' data-inset="false" class="ui-cp-por-dia animateMe">
+                        <h1 class="ui-cp-collapsible-title ui-collapsible-heading">
+                            <span class="ui-cp-li-wrapper">
+                                <span class="ui-cp-nome-palco">30 de maio de 2015</span>
+                            </span>
+                        </h1>
+                        <ul id='dia-30' data-role="listview" data-filter="true" data-input="#filterable-input-agenda"></ul>
+                    </div><!-- Dia 30 de maio -->
+                </div> <!-- END: collapsible-set -->
+                <!-- Fim Lista -->
+            </div>
+            <div id="schedule-filter-panel" data-role="panel" data-display="push" data-position="right">
+                
+            </div>
+        </section>
+        <!-- end schedule page -->
+        
+        <!-- speekers page -->
+        <section id="speekers-page" data-role="page">
+            <header data-role="header">
+                <h1 class="be-expotec-white-logo"></h1>
+                <a data-rel="back"><i class="fa fa-reorder fa-2x"></i></a>
+            </header>
+            <div role="main" class="ui-content">
+                
+            </div>
+        </section>
+        <!-- end speekers page -->
+        
+        <!-- news page -->
+        <section id="news-page" data-role="page" class="ui-responsive-panel">
+            <header data-role="header">
+                <h1 class="be-expotec-white-logo"></h1>
+                <a data-rel="back"><i class="fa fa-reorder fa-2x"></i></a>
+                <a href="#news-filter-panel"><i class="fa fa-filter fa-2x"></i></a>
+            </header>
+            <div role="main" class="ui-content">
+                
+            </div>
+            <div id="news-filter-panel" data-role="panel" data-display="push" data-position="right">
+                
+            </div>
+        </section>
+        <!-- end news page -->
+        
+        <!-- about page -->
+        <section id="about-page" data-role="page">
+            <header data-role="header">
+                <h1 class="be-expotec-white-logo"></h1>
+                <a data-rel="back"><i class="fa fa-reorder fa-2x"></i></a>
+            </header>
+            <div role="main" class="ui-content">
+                
+            </div>
+        </section>
+        <!-- end about page -->
+        
+        <a id="btn-goto-top" onclick="$.mobile.silentScroll(0); $(this).fadeOut();"><i class="fa fa-arrow-circle-up fa-4x"></i></a>
+    </body>
+</html>

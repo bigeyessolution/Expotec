@@ -1,0 +1,103 @@
+/*
+ * This file is part of Expotec App.
+ *
+ *  Foobar is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  Foobar is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
+ *
+*/
+/* 
+    Created on : 16/05/2015, 16:04:53
+    Author     : laudivan
+*/
+
+section { height: 100% }
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+}
+
+#eventhub-mainlogo {
+    background-color: #ffffff;
+    background-image: url('./../images/expotec-logo.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 55%
+}
+
+.be-mainmenu {}
+
+.be-main-menu-grid { height: 45%; color: #2FC3DF!important; }
+
+.be-mainmenu-btn, .be-mainmenu-btn:visited,
+.be-mainmenu-btn:active { text-shadow: none !important; padding: 0 !important;}
+
+.be-mainmenu-btn { color: #ffffff!important; background: #2FC3DF!important; }
+
+.be-mainmenu-btn i { margin-bottom: 0.2em; }
+
+.be-mainmenu-btn:active { color: #2FC3DF!important; background: #ffffff !important; }
+
+.be-main-menu-grid .ui-grid-a { height: 50%; }
+
+.be-main-menu-grid .ui-block-a, .be-main-menu-grid 
+.ui-block-b, .be-main-menu-grid .ui-block-c, 
+.be-main-menu-grid .ui-btn { height: 100% !important; }
+
+.be-main-menu-grid .ui-btn { border-radius: 0 !important; margin: 0 !important}
+
+.center-vertically {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.ui-header .ui-btn {
+    border: none !important;
+    background: none !important;
+    box-shadow: none !important;
+    color: #ffffff !important;
+    padding: 0.5em !important;
+}
+
+.be-expotec-white-logo {
+    background-image: url('../images/expotec-logo-white.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#btn-goto-top {
+    display: block;
+    color: #2FC3DF;
+    position: fixed;
+    bottom: 1em;
+    float: right;
+    right: 1em;
+}
+
+.ui-panel {
+    background: #f0f0f0 !important;
+}
+
+.ui-header { height: 2.5em !important; }
+
+.ui-content { margin-top: 1em !important; }
