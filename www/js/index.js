@@ -48,10 +48,33 @@ $(function()
         
         switch (nextPageId) {
             case 'schedule-page':
+                
+                $.getJSON(
+                'http://www.expotec.org.br/infoAgendaJson.html?auth=batman', 
+                function (data) 
+                {
+                    $.each(data.agenda, function(index, item)
+                    {
+                       for(var key in item) {
+                           console.log(item[key].titulo);
+                       }
+                    });
+                });
                 break;
             case 'speekers-page':
+                $.getJSON(
+                'http://www.expotec.org.br/infoPalestrantesJson.html?auth=batman', 
+                function (data) 
+                {
+                });
                 break;
             case 'news-page':
+                $.getJSON(
+                'http://www.expotec.org.br/infoNoticiasJson.html?auth=batman', 
+                function (data) 
+                {
+                    
+                });
                 break;
             default:
         }

@@ -19,25 +19,6 @@
 /**
  * 
  * @param {string} cacheName
- * @param {string} apiUrl
- * @param {function} callback
- * @returns {object}
- */
-function getJSON2Cache (cacheName, apiUrl, callback) {
-    cache = getCache(cacheName);
-    
-    if (cache || cache.fixed) {
-        callback(cache.data);
-        
-        return;
-    }
-    
-    $.getJSON(apiUrl, callback);
-}
-
-/**
- * 
- * @param {string} cacheName
  * @param {boolean} fixed
  * @param {mixed} content
  * @returns {void}
@@ -57,7 +38,9 @@ function getCache (cacheName) {
     if (cache) {
         cache.time = Number(cache.time);
         cache.fixed = Boolean(cache.fixed);
+        
+        return cache;
     }
     
-    return cache;
+    return false;
 }
